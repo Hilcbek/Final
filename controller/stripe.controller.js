@@ -22,8 +22,8 @@ export let Payment = expressAsync(async (req, res, next) => {
     let session = await stripe.checkout.sessions.create({
       line_items: line_items,
       mode: "payment",
-      success_url: "http://localhost:5173/success",
-      cancel_url: "http://localhost:5173",
+      success_url: "https://simple-eco-front.vercel.app/success",
+      cancel_url: "https://simple-eco-front.vercel.app",
     });
     res.send({url : session.url});
   } catch (error) {

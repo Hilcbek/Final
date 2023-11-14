@@ -9,7 +9,7 @@ let app = express();
 dotenv.config();
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://simple-eco-front.vercel.app/"],
+    origin: ["http://localhost:5173","https://simple-eco-front.vercel.app"],
     credentials: true,
   })
 );
